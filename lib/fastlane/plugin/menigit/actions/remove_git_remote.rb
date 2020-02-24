@@ -28,7 +28,8 @@ module Fastlane
           FastlaneCore::ConfigItem.new(key: :remote,
                          env_name: "FL_REMOVE_GIT_REMOTE_REMOTE",
                          description: "Remote name",
-                         optional: false)
+                         optional: false,
+                         is_string: true)
         ]
       end
 

@@ -6,9 +6,6 @@ module Fastlane
       def self.run(options)
         remote = options[:remote]
         path = options[:path]
-        UI.user_error!("No remote name given, pass using `remote: 'name'`") unless remote.to_s.length > 0
-        UI.user_error!("No path given, pass using `path: 'path'`") unless path.to_s.length > 0
-
         UI.message("Adding remote #{remote} #{path} 🎯.")
         Actions.sh("git remote add #{remote.shellescape} #{path.shellescape}")
       end

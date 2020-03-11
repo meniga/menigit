@@ -6,8 +6,6 @@ module Fastlane
       def self.run(options)
         remote = options[:remote]
 
-        UI.user_error!("No remote name given, pass using `remote: 'name'`") unless remote.to_s.length > 0
-
         UI.message("Removing remote #{remote} 🎯.")
         Actions.sh("git remote rm #{remote.shellescape}")
       end

@@ -29,7 +29,7 @@ module Fastlane
                          env_name: "FL_ENSURE_TAG_NOT_EXISTS_TAG",
                          description: "The tag name that should be checked",
                          optional: false,
-                         is_string: true),
+                         type: String),
           FastlaneCore::ConfigItem.new(key: :remote,
                          env_name: "FL_ENSURE_TAG_NOT_EXISTS_TAG_REMOTE",
                          description: "Whether to check remote. Defaults to true",
@@ -41,7 +41,7 @@ module Fastlane
                           description: "Whether to check remote. Defaults to true",
                           optional: true,
                           default_value: "origin",
-                          is_string: true)
+                          type: String)
         ]
       end
 

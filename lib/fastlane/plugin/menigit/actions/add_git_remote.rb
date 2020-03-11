@@ -28,12 +28,12 @@ module Fastlane
                          env_name: "FL_ADD_GIT_REMOTE_REMOTE",
                          description: "Remote name",
                          optional: false,
-                         is_string: true),
+                         type: String),
           FastlaneCore::ConfigItem.new(key: :path,
                          env_name: "FL_ADD_GIT_REMOTE_PATH",
                          description: "Path to repository. URL or SSH",
                          optional: false,
-                         is_string: true)
+                         type: String)
         ]
       end
 

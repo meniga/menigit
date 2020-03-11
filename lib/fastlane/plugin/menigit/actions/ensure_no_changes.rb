@@ -28,13 +28,13 @@ module Fastlane
                                        env_name: "ENSURE_NO_CHANGES_PATH",
                                        description: "Path for directory/file that you want check for diff",
                                        optional: false,
-                                       is_string: true),
+                                       type: String),
           FastlaneCore::ConfigItem.new(key: :show_diff,
                                        env_name: "ENSURE_NO_CHANGES_SHOW_DIFF",
                                        description: "The flag whether to show the git diff if the repo is dirty",
                                        optional: true,
                                        default_value: false,
-                                       is_string: false)
+                                       type: Boolean)
         ]
       end
 

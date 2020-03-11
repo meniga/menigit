@@ -32,13 +32,13 @@ module Fastlane
                                          env_name: "FL_SET_GIT_CONFIG_USER_NAME",
                                          description: "User name",
                                          optional: false,
-                                         is_string: true),
+                                         type: String),
 
           FastlaneCore::ConfigItem.new(key: :email,
                                          env_name: "FL_SET_GIT_CONFIG_USER_EMAIL",
                                          description: "User email",
                                          optional: false,
-                                         is_string: true)
+                                         type: String)
         ]
       end
 

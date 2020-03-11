@@ -27,7 +27,7 @@ module Fastlane
                          env_name: "FL_REMOVE_GIT_REMOTE_REMOTE",
                          description: "Remote name",
                          optional: false,
-                         is_string: true)
+                         type: String)
         ]
       end
 

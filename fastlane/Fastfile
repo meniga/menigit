@@ -1,3 +1,9 @@
 lane :test do
-  menigit
+  add_git_remote(
+    remote: "test",
+    path: "https://github.com/meniga/menigit"
+  )
+  remove_git_remote(
+    remote: "test"
+  )
 end

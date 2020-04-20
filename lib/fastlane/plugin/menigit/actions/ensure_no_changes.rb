@@ -10,7 +10,8 @@ module Fastlane
         if no_changes
           UI.success("Git diff for #{path} is clean, all good! 💪")
         else
-          error_message = "Git diff for #{path} is dirty! Please ensure the repo is in a clean state by committing/stashing/discarding all changes first."
+          error_message = params[:error_message]
+          error_message ||= "Git diff for #{path} is dirty! Please ensure the repo is in a clean state by committing/stashing/discarding all changes first."
           if params[:show_diff]
             error_message += "\nGit diff:\n#{git_diff}"
           end
@@ -34,7 +35,12 @@ module Fastlane
                                        description: "The flag whether to show the git diff if the repo is dirty",
                                        optional: true,
                                        default_value: false,
-                                       type: Boolean)
+                                       type: Boolean),
+          FastlaneCore::ConfigItem.new(key: :error_message,
+                                       env_name: "ENSURE_NO_CHANGES_ERROR_MESSAGE",
+                                       description: "Error message that will be show instead of default one based on path",
+                                       optional: true,
+                                       type: String)
         ]
       end
 

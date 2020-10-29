@@ -1,7 +1,7 @@
 # menigit plugin
 
 [![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/master/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-menigit)
-[![Build Status](https://travis-ci.org/meniga/menigit.svg?branch=master)](https://github.com/meniga/menigit)
+![Tests](https://github.com/meniga/menigit/workflows/Tests/badge.svg)
 [![codecov](https://codecov.io/gh/meniga/menigit/branch/master/graph/badge.svg)](https://codecov.io/gh/meniga/menigit)
 
 ## Getting Started

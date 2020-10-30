@@ -17,12 +17,6 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: 2.6
-    - name: Cache bundler gems
-      uses: actions/cache@v2
-      with:
-        path: vendor/bundle
-        key: ${{ runner.os }}-gems-${{ hashFiles('Gemfile.lock') }}
-        restore-keys: ${{ runner.os }}-gems-
     - name: Bundler
       run: |
         bundle config path vendor/bundle
